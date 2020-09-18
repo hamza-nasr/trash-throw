@@ -11,20 +11,21 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
-
+	
 	box1=createSprite(650,height-50,200,20);
-
+	
 	box2=createSprite(550,height-100,20,100);
-
+	
 	box3=createSprite(750,height-100,20,100)
-
+	
 	circle=createSprite(50,600,30,30);
-
+	
 	engine = Engine.create();
 	world = engine.world;
-
+	
 	//Create the Bodies Here.
-
+	Matter.Body();
+	Matter.World();
 
 	Engine.run(engine);
   
@@ -34,7 +35,6 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
-  
   drawSprites();
  
 }
