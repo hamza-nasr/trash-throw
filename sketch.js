@@ -6,9 +6,12 @@ const Body = Matter.Body;
 
 function preload()
 {
+
+	paper=loadImage("paper.png");
+	box1Image=loadImage("dustbingreen.png");
 	
 }
-
+var paper;
 function setup() {
 	createCanvas(800, 700);
 	engine = Engine.create();
@@ -39,17 +42,20 @@ function draw() {
   rectMode(CENTER);
   Engine.update(engine)
   background(0);
-  rect(box1.position.x,box1.position.y,200,20);
-  rect(box2.position.x,box2.position.y,20,100);
-  rect(box3.position.x,box3.position.y,20,100);
+  //image(paper,paper.position.x,paper.position.y)
+  rect(box2.position.x,box2.position.y=550,20,200);
+  rect(box3.position.x,box3.position.y=550,20,200);
   rect(ground.position.x,ground.position.y,800,20)
+  image(box1Image,box1.position.x=530,box1.position.y=450,240,200);
   ellipseMode(RADIUS);
-  ellipse(paper.position.x,paper.position.y,30,30);
+  ellipse(paper.position.x,paper.position.y,30);
+
 }
-function keyPressed() {
-	if(keyCode === UP_ARROW){
-	 Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
-	}
+function keyPressed(){
+	if(keyCode===(UP_ARROW)){
+      Matter.Body.applyForce(paper.body, paper.body.position,{x:85, y:-85});
 }
+}
+
 
 
