@@ -7,7 +7,7 @@ const Body = Matter.Body;
 function preload()
 {
 
-	paper=loadImage("paper.png");
+	paperhi=loadImage("paper.png");
 	box1Image=loadImage("dustbingreen.png");
 	
 }
@@ -32,7 +32,7 @@ function setup() {
 	World.add(world,box1);
 	World.add(world,box2);
 	World.add(world,box3);
-	World.add(world,paper);
+	World.add(world,paperhi);
 	World.add(world,ground);
   
 }
@@ -42,7 +42,7 @@ function draw() {
   rectMode(CENTER);
   Engine.update(engine)
   background(0);
-  //image(paper,paper.position.x,paper.position.y)
+  image(paperhi,paper.position.x,paper.position.y,300,300);
   rect(box2.position.x,box2.position.y=550,20,200);
   rect(box3.position.x,box3.position.y=550,20,200);
   rect(ground.position.x,ground.position.y,800,20)
@@ -52,10 +52,9 @@ function draw() {
 
 }
 function keyPressed(){
-	if(keyCode===(UP_ARROW)){
-      Matter.Body.applyForce(paper.body, paper.body.position,{x:85, y:-85});
+	if(keyCode === UP_ARROW){
+
+		Matter.Body.applyForce(paper.body, paper.body.position,{x:85, y:-85})
+
+	}
 }
-}
-
-
-
