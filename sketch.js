@@ -41,14 +41,14 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   Engine.update(engine)
-  background(0);
-  image(paperhi,paper.position.x,paper.position.y,300,300);
+  background("white");
+  image(paperhi,paper.position.x=50,paper.position.y=600,300,300);
   rect(box2.position.x,box2.position.y=550,20,200);
   rect(box3.position.x,box3.position.y=550,20,200);
   rect(ground.position.x,ground.position.y,800,20)
   image(box1Image,box1.position.x=530,box1.position.y=450,240,200);
-  ellipseMode(RADIUS);
-  ellipse(paper.position.x,paper.position.y,30);
+  //ellipseMode(RADIUS);
+  //ellipse(paper.position.x,paper.position.y,30);
 
 }
 function keyPressed(){
